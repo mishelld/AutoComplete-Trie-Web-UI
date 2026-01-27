@@ -1,8 +1,9 @@
-class AutoCompleteTrie {
+export default class AutoCompleteTrie {
   constructor(value = null) {
     this.value = value;
     this.children = {};
     this.endOfWord = false;
+    this.words = 0;
   }
   addWord(word) {
     let node = this;
@@ -18,6 +19,7 @@ class AutoCompleteTrie {
       i++;
     }
     node.endOfWord = true;
+    this.words += 1;
   }
   findWord(word) {
     let node = this;
@@ -71,4 +73,3 @@ class AutoCompleteTrie {
 }
 
 //trie.print();
-module.exports = AutoCompleteTrie;
