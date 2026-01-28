@@ -12,7 +12,7 @@
   gap: 10px;
 }
 .dict input {
-    flex: 1;
+  flex: 1;
 }
 #button {
   background-color: rgb(126, 87, 255);
@@ -24,22 +24,37 @@
   cursor: pointer;
 }
 input {
-      border-radius: 5px;
-      border: 1px solid rgb(154, 154, 154);
-        padding: 12px 20px;
-
-
+  border-radius: 5px;
+  border: 1px solid rgb(154, 154, 154);
+  padding: 12px 20px;
 }
 .count {
-    background-color: rgb(241, 241, 241);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
 }
-.count  h1,
+.count h1,
 .count p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+#counter {
+   color: rgb(126, 87, 255);
+
+}
+#message {
+  padding: 10px 15px;
+    border-radius: 5px;
+
+}
+.green {
+    background-color: rgba(1, 255, 60, 0.316);
+
+}
+.red {
+    background-color: rgba(255, 1, 1, 0.316);
+
 }
