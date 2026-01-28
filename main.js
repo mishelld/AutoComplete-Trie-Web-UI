@@ -24,7 +24,19 @@ button.addEventListener("click", () => {
 
 const suggestion = document.getElementById("suggestion");
 suggestion.addEventListener("input", (event) => {
-  const predictWord = trie.predictWords(event.target.value);
-  console.log("User typed:", event.target.value);
-  console.log(predictWord);
+  const typed = event.target.value;
+  const predictWords = trie.predictWords(typed);
+  const ul = document.querySelector("ul");
+  if (typed != "") {
+    ul.classList.add("display");
+  } else {
+    ul.classList.remove("display");
+  }
+  ul.innerHTML = "";
+  for (const word of predictWords) {
+    const li = document.createElement("li");
+    const slice = word.slice(typed.length);
+    li.innerHTML = `<span class="red">${typed}</span>${slice}`;
+    ul.appendChild(li);
+  }
 });
